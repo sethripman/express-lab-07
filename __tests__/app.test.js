@@ -53,6 +53,20 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'cookie dough',
+              amount: 1,
+              measurement: 'cookies-worth'
+            },
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'the finest toothpaste',
+              amount: 5,
+              measurement: 'globs'
+            }
+          ],
           __v: 0
         });
       });
@@ -112,6 +126,20 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'cookie dough',
+              amount: 1,
+              measurement: 'cookies-worth'
+            },
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'the finest toothpaste',
+              amount: 5,
+              measurement: 'globs'
+            }
+          ],
           __v: 0
         });
       });
@@ -153,6 +181,20 @@ describe('app routes', () => {
             'put dough on cookie sheet',
             'bake for 10 minutes'
           ],
+          ingredients: [
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'cookie dough',
+              amount: 1,
+              measurement: 'cookies-worth'
+            },
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'the finest toothpaste',
+              amount: 5,
+              measurement: 'globs'
+            }
+          ],
           __v: 0
         });
       });
@@ -192,6 +234,20 @@ describe('app routes', () => {
             'mix ingredients',
             'put dough on cookie sheet',
             'bake for 10 minutes'
+          ],
+          ingredients: [
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'cookie dough',
+              amount: 1,
+              measurement: 'cookies-worth'
+            },
+            {
+              _id: expect.any(mongoose.Types.ObjectId),
+              name: 'the finest toothpaste',
+              amount: 5,
+              measurement: 'globs'
+            }
           ],
           __v: 0
         });
