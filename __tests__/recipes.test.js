@@ -6,7 +6,7 @@ const connect = require('../lib/utils/connect');
 const mongoose = require('mongoose');
 const Recipe = require('../lib/models/Recipe');
 
-describe('app routes', () => {
+describe('recipes routes', () => {
   beforeAll(() => {
     connect();
   });
@@ -45,7 +45,7 @@ describe('app routes', () => {
       })
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(String),
+          _id: expect.any(mongoose.Types.ObjectId),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
@@ -118,7 +118,7 @@ describe('app routes', () => {
       .get(`/api/v1/recipes/${recipe._id}`)
       .then(recipe => {
         expect(recipe.body).toEqual({
-          _id: expect.any(String),
+          _id: expect.any(mongoose.Types.ObjectId),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
@@ -173,7 +173,7 @@ describe('app routes', () => {
       .send({ name: 'good cookies' })
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(String),
+          _id: expect.any(mongoose.Types.ObjectId),
           name: 'good cookies',
           directions: [
             'preheat oven to 375',
@@ -227,7 +227,7 @@ describe('app routes', () => {
       .delete(`/api/v1/recipes/${recipe._id}`)
       .then(deletedRecipe => {
         expect(deletedRecipe.body).toEqual({
-          _id: expect.any(String),
+          _id: expect.any(mongoose.Types.ObjectId),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
