@@ -45,7 +45,7 @@ describe('recipes routes', () => {
       })
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(mongoose.Types.ObjectId),
+          _id: expect.any(String),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
@@ -55,13 +55,13 @@ describe('recipes routes', () => {
           ],
           ingredients: [
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'cookie dough',
               amount: 1,
               measurement: 'cookies-worth'
             },
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'the finest toothpaste',
               amount: 5,
               measurement: 'globs'
@@ -118,7 +118,7 @@ describe('recipes routes', () => {
       .get(`/api/v1/recipes/${recipe._id}`)
       .then(recipe => {
         expect(recipe.body).toEqual({
-          _id: expect.any(mongoose.Types.ObjectId),
+          _id: expect.any(String),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
@@ -128,13 +128,13 @@ describe('recipes routes', () => {
           ],
           ingredients: [
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'cookie dough',
               amount: 1,
               measurement: 'cookies-worth'
             },
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'the finest toothpaste',
               amount: 5,
               measurement: 'globs'
@@ -173,7 +173,7 @@ describe('recipes routes', () => {
       .send({ name: 'good cookies' })
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(mongoose.Types.ObjectId),
+          _id: expect.any(String),
           name: 'good cookies',
           directions: [
             'preheat oven to 375',
@@ -183,13 +183,13 @@ describe('recipes routes', () => {
           ],
           ingredients: [
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'cookie dough',
               amount: 1,
               measurement: 'cookies-worth'
             },
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'the finest toothpaste',
               amount: 5,
               measurement: 'globs'
@@ -227,7 +227,7 @@ describe('recipes routes', () => {
       .delete(`/api/v1/recipes/${recipe._id}`)
       .then(deletedRecipe => {
         expect(deletedRecipe.body).toEqual({
-          _id: expect.any(mongoose.Types.ObjectId),
+          _id: expect.any(String),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
@@ -237,13 +237,13 @@ describe('recipes routes', () => {
           ],
           ingredients: [
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'cookie dough',
               amount: 1,
               measurement: 'cookies-worth'
             },
             {
-              _id: expect.any(mongoose.Types.ObjectId),
+              _id: expect.any(String),
               name: 'the finest toothpaste',
               amount: 5,
               measurement: 'globs'
