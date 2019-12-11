@@ -1,11 +1,11 @@
 {
   "name": "starter-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is the sauce",
   "main": "server.js",
   "scripts": {
     "test": "jest --verbose --runInBand",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test -- --watchAll",
     "start": "node server.js",
     "start:watch": "nodemon server.js"
   },
@@ -21,6 +21,10 @@
     "jest": "^24.9.0",
     "nodemon": "^2.0.1",
     "supertest": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sethripman/express-lab-07.git"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
