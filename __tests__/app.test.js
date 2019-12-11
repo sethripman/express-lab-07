@@ -80,7 +80,7 @@ describe('app routes', () => {
       .get(`/api/v1/recipes/${recipe._id}`)
       .then(recipe => {
         expect(recipe.body).toEqual({
-          _id: expect.any(String),
+          _id: recipe._id.toString(),
           name: 'cookies',
           directions: [
             'preheat oven to 375',
