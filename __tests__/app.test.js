@@ -77,7 +77,7 @@ describe('app routes', () => {
     });
 
     return request(app)
-      .get(`/api/v1/recipes/`)
+      .get(`/api/v1/recipes/${recipe._id}`)
       .then(recipe => {
         expect(recipe.body).toEqual({
           _id: expect.any(String),
