@@ -121,4 +121,32 @@ describe('app routes', () => {
         });
       });
   });
+
+  it('deletes a recipe by id', async() => {
+    const recipe = await Recipe.create({
+      name: 'cookies',
+      directions: [
+        'preheat oven to 375',
+        'mix ingredients',
+        'put dough on cookie sheet',
+        'bake for 10 minutes'
+      ],
+    });
+
+    return request(app)
+      .delete(`/api/v1/recipes/${recipe._id}`)
+      .then(deletedRecipe => {
+        expect(deletedRecipe.body).toEqual({
+          _id: expect.any(String),
+          name: 'cookies',
+          directions: [
+            'preheat oven to 375',
+            'mix ingredients',
+            'put dough on cookie sheet',
+            'bake for 10 minutes'
+          ],
+          __v: 0
+        });
+      });
+  });
 });
