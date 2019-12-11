@@ -29,6 +29,18 @@ describe('app routes', () => {
           'mix ingredients',
           'put dough on cookie sheet',
           'bake for 10 minutes'
+        ],
+        ingredients: [
+          {
+            name: 'cookie dough',
+            amount: 1,
+            measurement: 'cookies-worth'
+          },
+          {
+            name: 'the finest toothpaste',
+            amount: 5,
+            measurement: 'globs'
+          }
         ]
       })
       .then(res => {
@@ -74,6 +86,18 @@ describe('app routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [
+        {
+          name: 'cookie dough',
+          amount: 1,
+          measurement: 'cookies-worth'
+        },
+        {
+          name: 'the finest toothpaste',
+          amount: 5,
+          measurement: 'globs'
+        }
+      ]
     });
 
     return request(app)
@@ -102,6 +126,18 @@ describe('app routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [
+        {
+          name: 'cookie dough',
+          amount: 1,
+          measurement: 'cookies-worth'
+        },
+        {
+          name: 'the finest toothpaste',
+          amount: 5,
+          measurement: 'globs'
+        }
+      ]
     });
 
     return request(app)
@@ -131,6 +167,18 @@ describe('app routes', () => {
         'put dough on cookie sheet',
         'bake for 10 minutes'
       ],
+      ingredients: [
+        {
+          name: 'cookie dough',
+          amount: 1,
+          measurement: 'cookies-worth'
+        },
+        {
+          name: 'the finest toothpaste',
+          amount: 5,
+          measurement: 'globs'
+        }
+      ]
     });
 
     return request(app)
